@@ -1,7 +1,9 @@
 package com.gamerunner.gamerunner;
 
 import com.gamerunner.gamerunner.game.Game;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GameRunner {
     Game game;
 
@@ -10,7 +12,7 @@ public class GameRunner {
     }
 
     public void run() {
-        System.out.println("Running game" + game);
+        System.out.println("Running game" + game.toString());
 
         game.up();
         game.down();
